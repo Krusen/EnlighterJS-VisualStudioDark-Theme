@@ -1,3 +1,5 @@
+# Visual Studio Dark Theme for EnlighterJS
+
 This theme tries to match the Dark theme of Visual Studio as close as possible for C# and XML.
 
 However, it is not possible to match everything 100% correctly with regex only, so some class and enum usage in code might be incorrect. The matching is also dependent on correct namning of classes (PascalCase), interfaces (IPascalCase) and generics (T or TPascalCase).
