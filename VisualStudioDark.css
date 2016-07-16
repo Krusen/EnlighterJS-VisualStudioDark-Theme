@@ -1,0 +1,148 @@
+
+.visualstudiodarkEnlighterJS, .visualstudiodarkEnlighterJSWrapper{
+    font-family: Monaco, Courier, monospace;
+}
+.visualstudiodarkEnlighterJSTabPane .controls li{
+	background-color: #303030;
+	font-size: 12px;
+	color: #f2f2f2;
+	border-radius: 0px;
+}
+.visualstudiodarkEnlighterJSTabPane .controls li:hover{
+	color: #8F9657;
+	background-color: #303030;
+}
+.visualstudiodarkEnlighterJSTabPane .controls .selected, .visualstudiodarkEnlighterJSTabPane .controls .selected:hover{
+	background-color: #000000;
+}
+/* Inline Styles */
+.visualstudiodarkEnlighterJS span{
+	color: #f8f8f8;
+}
+span.visualstudiodarkEnlighterJS{
+	border-radius: 3px;
+	background-color: #fafafa;
+	padding: 3px 5px;
+}
+span.visualstudiodarkEnlighterJS span{
+	color: #0978B9;
+	font-weight: bold;
+}
+
+/* Line numbers */
+ol.visualstudiodarkEnlighterJS {
+	background-color: #36382F;
+	list-style-type: decimal;
+	border: solid 1px #222222;
+	border-radius: 3px;
+}
+
+ul.visualstudiodarkEnlighterJS {
+	background-color: #f2f2f2;
+	border: solid 1px #222222;
+}
+
+ol.visualstudiodarkEnlighterJS li,
+ul.visualstudiodarkEnlighterJS li{
+	border: none;
+	border-left: 1px solid #939393;
+	line-height: 16px;
+	background-color: #141414;
+}
+
+/* Line hover */
+ol.visualstudiodarkEnlighterJS.hoverEnabled li:hover,
+ul.visualstudiodarkEnlighterJS.hoverEnabled li:hover{
+	background-color: #000000;
+	border: none;
+	border-left: 1px solid #939393;
+}
+
+/* Special line highlight */
+ol.visualstudiodarkEnlighterJS li.specialline,
+ul.visualstudiodarkEnlighterJS li.specialline {
+	background-color: #313131;
+}
+
+/* base styles */
+ol.visualstudiodarkEnlighterJS,
+ol.visualstudiodarkEnlighterJS li,
+ul.visualstudiodarkEnlighterJS,
+ul.visualstudiodarkEnlighterJS li{
+	font-family: Monaco, Courier, monospace;
+	font-size: 10px;
+	color: #939393;
+}
+
+/* default symbol style */
+.visualstudiodarkEnlighterJS span{
+	font-family: Monaco, Courier, monospace;
+	font-size: 12px;
+	line-height: 16px;
+	color: #DCDCDC;
+}
+
+/* Symbol styles */
+/* Start Delimiter e.g. <?php */
+.visualstudiodarkEnlighterJS .de1 { color: #DCDCDC; }
+
+/* Stop Delimiter e.g. ?> */
+.visualstudiodarkEnlighterJS .de2 { color: #DCDCDC; }
+
+/* Language Kewords */
+.visualstudiodarkEnlighterJS .kw1 { color: #569CD6; } /* C# keywords: return, public, private etc. + int, bool, string etc. */
+.visualstudiodarkEnlighterJS .kw2 { color: #92CAF4; } /* C# Nothing currently */
+.visualstudiodarkEnlighterJS .kw3 { color: #4EC9B0; } /* C# Classes */
+.visualstudiodarkEnlighterJS .kw4 { color: #B8D7A3; } /* C# Interfaces */
+
+/* Comments */
+.visualstudiodarkEnlighterJS .co1 { color: #57A64A; }
+.visualstudiodarkEnlighterJS .co2 { color: #57A64A; }
+
+/* Strings */
+.visualstudiodarkEnlighterJS .st0 { color: #C8C8C8; } /* C# chars (single quote string) | HTML/XML attribute key  */
+.visualstudiodarkEnlighterJS .st1 { color: #D69D85; } /* string value */
+.visualstudiodarkEnlighterJS .st2 { color: #8F9657; } 
+
+/* Numbers */
+.visualstudiodarkEnlighterJS .nu0 { color: #B5CEA8; }
+
+/* Function calls: function() */
+.visualstudiodarkEnlighterJS .me0 { color: #DCDCDC; } /* C# Noting currently */
+
+/* Method calls: .method() */ 
+.visualstudiodarkEnlighterJS .me1 { color: #DCDCDC; } /* Method invocation */
+
+/* Brackets */
+.visualstudiodarkEnlighterJS .br0 { color: #DCDCDC; } /* Bracket */
+
+/* Symbols/operators */
+.visualstudiodarkEnlighterJS .sy0 { color: #B4B4B4; } /* Symbol/operators */
+
+/* Escape Sequences */
+.visualstudiodarkEnlighterJS .es0 { color: #DCDCDC; } /* Escape symbol */
+
+/* Regular Expression outside Strings */
+.visualstudiodarkEnlighterJS .re0 { color: #9A5334; } /* Regex */
+
+.visualstudiodarkEnlighterJSRawButton::AFTER{
+	content: 'Toggle RAW Code';
+}
+
+/* Raw Code Pane */
+.visualstudiodarkEnlighterJSWrapper pre{
+	font-family: Monaco, Courier, monospace;	
+	background-color: #141414;
+	font-size: 12px;
+	color: #f8f8f8;
+	line-height: 20px;
+}
+
+/* Tab Pane */
+.visualstudiodarkEnlighterJSWrapper .EnlighterJSToolbar > a{
+	border-radius: 0px;
+	opacity: 0.8;
+}
+.visualstudiodarkEnlighterJSWrapper .EnlighterJSToolbar > a:hover{
+	opacity: 1.0;
+}
