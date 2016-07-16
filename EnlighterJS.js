@@ -1763,7 +1763,7 @@ provides: [EnlighterJS.Language.csharp]
             };
             this.patterns = {
                 classes: {
-                    pattern: /\s*:\s*([A-Z]\w+)(?=[$\s<])|<([A-Z][^A-Z]\w*)>|\[([A-Z]\w+)[(\]]|(?:\(|\(this\s|,\s)([A-Z]\w+)(?!\s=)(?:\s|\.)|(?:public|private|protected)\s(?:static\s|sealed\s|override\s|virtual\s)?(?:readonly\s|const\s|class\s)?([A-Z]\w+)|\(([A-Z]\w+\))|as\s([A-Z]\w+)/gm,
+                    pattern: /\s*:\s*([A-Z]\w+)(?=[$\s<])|<([A-Z][^A-Z]\w*)>|\[([A-Z]\w+)[(\]]|(?:\(|\(this\s|,\s)([A-Z]\w+)(?!\s=)(?:\s|\.)|(?:new|return)\s([A-Z]\w+)[$\s(<]|(?:public|private|protected)\s(?:static\s|sealed\s|override\s|virtual\s)?(?:readonly\s|const\s|class\s)?([A-Z]\w+)|\(([A-Z]\w+\))|as\s([A-Z]\w+)/gm,
                     alias: "kw3"
                 },
                 interfaces: {
