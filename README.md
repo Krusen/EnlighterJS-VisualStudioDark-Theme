@@ -4,7 +4,7 @@ This theme tries to match the Dark theme of Visual Studio as close as possible f
 
 However, it is not possible to match everything 100% correctly with regex only, so some class and enum usage in code might be incorrect. The matching is also dependent on correct namning of classes (PascalCase), interfaces (IPascalCase) and generics (T or TPascalCase).
 
-# Notes
+## Notes
 
 **Only tested with C# and XML**.
 
@@ -12,7 +12,7 @@ This is tested for use with [EnlighterJS](http://enlighterjs.org/) v2.10.1 and [
 
 This also requires some modifications to EnlighterJS for better matching of keywords etc. in C#, which is why I have included it is in this project as well - you can hower do the modifications yourself.
 
-# Changes to EnlighterJS (C#)
+## Changes to EnlighterJS (C#)
 
 I've added more words to the keywords and changed alias for the primitives. I've also added regex patterns for classes, interfaces, operators and numbers to be able to match the theme of Visual Studio as close a possible.
 
