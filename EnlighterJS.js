@@ -49,11 +49,11 @@ provides: [EnlighterJS]
         // cached code input
         rawCode: null,
         /**
-	 * @constructs
-	 * @param {Element} originalCodeblock An Element containing code to highlight
-	 * @param {Object} options The options object.
-	 * @param {Element} container (optional) The output container - if not defined, the output will be injected after the originalCodeblock
-	 */
+     * @constructs
+     * @param {Element} originalCodeblock An Element containing code to highlight
+     * @param {Object} options The options object.
+     * @param {Element} container (optional) The output container - if not defined, the output will be injected after the originalCodeblock
+     */
         initialize: function(originalCodeblock, opt, container) {
             this.setOptions(opt);
             // create new language alias manager instance
@@ -74,12 +74,12 @@ provides: [EnlighterJS]
             }
         },
         /**
-	 * Takes a codeblock and highlights the code inside of it using the
-	 * stored parser/compilers. It reads the class name to figure out what
-	 * language and theme to use for highlighting.
-	 * 
-	 * @return {EnlighterJS} The current EnlighterJS instance.
-	 */
+     * Takes a codeblock and highlights the code inside of it using the
+     * stored parser/compilers. It reads the class name to figure out what
+     * language and theme to use for highlighting.
+     * 
+     * @return {EnlighterJS} The current EnlighterJS instance.
+     */
         enlight: function(enabled) {
             // show highlighted sourcecode ?
             if (enabled) {
@@ -116,7 +116,7 @@ provides: [EnlighterJS]
                     // grab content into specific container or after original code block ?
                     if (!this.container) {
                         this.container = new EJS.Dom.Element("div");
-                        // put the highlighted code wrapper behind the original	
+                        // put the highlighted code wrapper behind the original 
                         this.container.inject(this.originalCodeblock, "after");
                     }
                     // add wrapper class
@@ -184,9 +184,9 @@ provides: [EnlighterJS]
             this.isRendered = false;
         },
         /**
-	 * Extracts the raw code from given codeblock
-	 * @return {String} The plain-text code (raw)
-	 */
+     * Extracts the raw code from given codeblock
+     * @return {String} The plain-text code (raw)
+     */
         getRawCode: function(reindent) {
             // cached version available ?
             var code = this.rawCode;
@@ -222,8 +222,8 @@ provides: [EnlighterJS]
             return code;
         },
         /**
-	 * Hide/Show the RAW Code Container/Toggle Highlighted Code
-	 */
+     * Hide/Show the RAW Code Container/Toggle Highlighted Code
+     */
         toggleRawCode: function(show) {
             // initialization required!
             if (this.output == null) {
@@ -336,26 +336,26 @@ provides: [EnlighterJS.Dom]
  */
     EJS.Dom = {
         /**
-	 * Selects a single DOM Eement by given css selector
-	 * @param sel
-	 * @returns
-	 */
+     * Selects a single DOM Eement by given css selector
+     * @param sel
+     * @returns
+     */
         getElement: function(sel) {
             return document.getElement(sel);
         },
         /**
-	 * Selects a collection of DOM Eöements by given css selector
-	 * @param sel
-	 * @returns
-	 */
+     * Selects a collection of DOM Eöements by given css selector
+     * @param sel
+     * @returns
+     */
         getElements: function(sel) {
             return document.getElements(sel);
         },
         /**
-	 * Selects an Element by it's ID
-	 * @param elementID
-	 * @returns DOM Element
-	 */
+     * Selects an Element by it's ID
+     * @param elementID
+     * @returns DOM Element
+     */
         id: function(elementID) {
             return document.id(elementID);
         }
@@ -396,9 +396,9 @@ provides: [EnlighterJS.SpecialLineHighlighter]
         // storage of line numbers to highlight
         specialLines: {},
         /**
-	 * @constructs
-	 * @param {String} html attribute content "highlight" - scheme 4,5,6,10-12,19
-	 */
+     * @constructs
+     * @param {String} html attribute content "highlight" - scheme 4,5,6,10-12,19
+     */
         initialize: function(lineNumberString, lineOffsetString) {
             // special lines given ?
             if (lineNumberString == null || lineNumberString.length == 0) {
@@ -431,10 +431,10 @@ provides: [EnlighterJS.SpecialLineHighlighter]
             }.bind(this));
         },
         /**
-	 * Check if the given linenumber is a special line
-	 * @param Integer lineNumber
-	 * @returns {Boolean}
-	 */
+     * Check if the given linenumber is a special line
+     * @param Integer lineNumber
+     * @returns {Boolean}
+     */
         isSpecialLine: function(lineNumber) {
             return this.specialLines["l" + lineNumber] || false;
         }
@@ -460,9 +460,9 @@ provides: [EnlighterJS.LanguageManager]
             language: "generic"
         },
         /**
-	 * @constructs
-	 * @param {Object} options The options object.
-	 */
+     * @constructs
+     * @param {Object} options The options object.
+     */
         initialize: function(options) {
             this.setOptions(options);
         },
@@ -539,12 +539,12 @@ provides: [EnlighterJS.Renderer.InlineRenderer]
             this.textFilter = textFilter;
         },
         /**
-	 * Renders the generated Tokens
-	 * 
-	 * @param {Language} language The Language used when parsing.
-	 * @param {SpecialLineHighlighter} specialLines Instance to define the lines to highlight           
-	 * @return {Element} The renderer output
-	 */
+     * Renders the generated Tokens
+     * 
+     * @param {Language} language The Language used when parsing.
+     * @param {SpecialLineHighlighter} specialLines Instance to define the lines to highlight           
+     * @return {Element} The renderer output
+     */
         render: function(language, specialLines, localOptions) {
             // create output container element
             var container = new EJS.Dom.Element(this.options.inlineContainerTag);
@@ -588,12 +588,12 @@ provides: [EnlighterJS.Renderer.BlockRenderer]
             this.textFilter = textFilter;
         },
         /**
-	 * Renders the generated Tokens
-	 * 
-	 * @param {Language} language The Language used when parsing.
-	 * @param {SpecialLineHighlighter} specialLines Instance to define the lines to highlight           
-	 * @return {Element} The renderer output
-	 */
+     * Renders the generated Tokens
+     * 
+     * @param {Language} language The Language used when parsing.
+     * @param {SpecialLineHighlighter} specialLines Instance to define the lines to highlight           
+     * @return {Element} The renderer output
+     */
         render: function(language, specialLines, localOptions) {
             // elememt shortcut
             var _el = EJS.Dom.Element;
@@ -1094,16 +1094,16 @@ provides: [EnlighterJS.UI.TabPane]
         // current active tab
         selectedTabIndex: 0,
         /**
-	 * @constructs
-	 * @param {String} cssClassname The class-name of the outer container
-	 */
+     * @constructs
+     * @param {String} cssClassname The class-name of the outer container
+     */
         initialize: function(cssClassname) {
             // create container
             this.container = new EJS.Dom.Element("div", {
                 "class": "EnlighterJSTabPane " + cssClassname.toLowerCase() + "EnlighterJSTabPane"
             });
             // create container structure
-            //	<div class="EnlighterJSTabPane ...">
+            //  <div class="EnlighterJSTabPane ...">
             //    <div class="controls">
             //       <ul> <li>Tab1</li> .... </ul>
             //    </div>
@@ -1307,12 +1307,12 @@ provides: [EnlighterJS.Language.generic]
             numbers: /\b((?:(\d+)?\.)?[0-9]+|0x[0-9A-F]+)\b/gi
         },
         /**
-	 * Constructor.
-	 * 
-	 * @constructs
-	 * @param {Object}
-	 *            options
-	 */
+     * Constructor.
+     * 
+     * @constructs
+     * @param {Object}
+     *            options
+     */
         initialize: function(code) {
             // initialize language options
             this.setupLanguage();
@@ -1763,11 +1763,11 @@ provides: [EnlighterJS.Language.csharp]
             };
             this.patterns = {
                 classes: {
-                    pattern: /=\s\(([A-Z]\w+)\)|<([A-Z]\w+)>|\s:\s([A-Z]\w+)|\[([A-Z]\w+)[(\]]|(?:new|return)\s([A-Z]\w+)|^\s*([A-Z]\w+)(?:[\s.])(?:\.[A-Z]\w+)?(?!=)|(?:\(|\(this\s|,\s|=\s)([A-Z]\w+)(?!\s=)(?:\s|\.)|(?:public|private|protected)\s(?:sealed\s|override\s|virtual\s)?(?:static\s|readonly\s|const\s|class\s)?([A-Z]\w+)/gm,
+                    pattern: /\s*:\s*([A-Z]\w+)(?=[$\s<])|<([A-Z][^A-Z]\w*)>|\[([A-Z]\w+)[(\]]|(?:\(|\(this\s|,\s)([A-Z]\w+)(?!\s=)(?:\s|\.)|(?:public|private|protected)\s(?:static\s|sealed\s|override\s|virtual\s)?(?:readonly\s|const\s|class\s)?([A-Z]\w+)|\(([A-Z]\w+\))|as\s([A-Z]\w+)/gm,
                     alias: "kw3"
                 },
                 interfaces: {
-                    pattern: /(?:\(|\s)(I[A-Z]\w+)/gm,
+                    pattern: /(?:\(|\s)(I[A-Z]\w+)|enum\s([A-Z]\w+)|<(T|T[A-Z]\w*?)>/gm,
                     alias: "kw4"
                 },
                 operators: {
