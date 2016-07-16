@@ -2,7 +2,7 @@
 
 This theme tries to match the Dark theme of Visual Studio as close as possible for C# and XML.
 
-However, it is not possible to match everything 100% correctly with regex only, so some class and enum usage in code might be incorrect. The matching is also dependent on correct namning of classes (PascalCase), interfaces (IPascalCase) and generics (T or TPascalCase).
+However, it is not possible to match everything 100% correctly with regex only, so some class and enum usage in code might be incorrect. The matching is also dependent on correct namning of classes (`PascalCase`), interfaces (`IPascalCase`) and generics (`T` or `TPascalCase`).
 
 ## Notes
 
@@ -11,6 +11,16 @@ However, it is not possible to match everything 100% correctly with regex only, 
 This is tested for use with [EnlighterJS](http://enlighterjs.org/) v2.10.1 and [the Wordress Plugin](https://wordpress.org/plugins/enlighter/) v3.1.
 
 This also requires some modifications to EnlighterJS for better matching of keywords etc. in C#, which is why I have included it is in this project as well - you can hower do the modifications yourself.
+
+## Screenshots
+
+![C# 1](/screenshots/csharp.png)
+
+![C# Attributes](/screenshots/csharp-attributes.png)
+
+![C# 2](/screenshots/csharp2.png)
+
+![XML](/screenshots/xml.png)
 
 ## Changes to EnlighterJS (C#)
 
